@@ -1,7 +1,6 @@
 <?php
     session_start();
     require_once 'vendor/connect.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,16 +36,21 @@
                             <td><?= $person[3] ?></td>
                             <td><?= $person[4] ?></td>
                             <td>
-                                <a href="upadate.php?id=<?= $person[0] ?>" >Изменить</a>
+                                <!-- <a href="upadate.php?id=<?= $person[0] ?>" >Изменить</a> -->
+                                <button class= "swall" type="button">Изменить</button>
                             </td>
                         </tr>
                     <?php
                 }
             ?>
+
+
         </table>
+        
     </div>
 
     <script src="assets/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </body>

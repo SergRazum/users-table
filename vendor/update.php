@@ -7,6 +7,13 @@ $birthday = $_POST['birthday'];
 $created = $_POST['created'];
 $updated = $_POST['updated'];
 
-mysqli_query($connect, "UPDATE `persons` SET `name` = '{$name}', `birthday` = '{$birthday}', `created` = '{$created}', `updated` = '{$updated}' WHERE `persons`.`id` = '{$id}'");
+if ($birthday == ''){
+    mysqli_query($connect, "UPDATE `persons` SET `name` = '{$name}', `created` = '{$created}', `updated` = '{$updated}' WHERE `persons`.`id` = '{$id}'");
+}
+else{
+    mysqli_query($connect, "UPDATE `persons` SET `name` = '{$name}', `birthday` = '{$birthday}', `created` = '{$created}', `updated` = '{$updated}' WHERE `persons`.`id` = '{$id}'");
+}
 
-header('Location: /index.php');?>
+
+// header('Location: /index.php');
+?>
