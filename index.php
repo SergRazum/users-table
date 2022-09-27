@@ -36,13 +36,14 @@
                             </td>
                             <td><?= $person[3] ?></td>
                             <td><?= $person[4] ?></td>
+                            <td>
+                                <a href="upadate.php?id=<?= $person[0] ?>" >Изменить</a>
+                            </td>
                         </tr>
                     <?php
                 }
             ?>
         </table>
-
-
     </div>
 
     <script src="assets/main.js"></script>
